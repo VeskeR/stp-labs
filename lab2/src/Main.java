@@ -30,7 +30,7 @@ public class Main {
             int[] copy = copyArray(arrs[i]);
             int arrLength = arrs[i].length;
             long beforeTest = System.currentTimeMillis();
-            copy = insertionSort(copy);
+            insertionSort(copy);
             if (arrLength == 100) {
                 System.out.println(Arrays.toString(copy));
             }
@@ -91,20 +91,16 @@ public class Main {
         }
     }
 
-    public static int[] insertionSort(int[] array) {
-        int[] copy = copyArray(array);
-
-        for (int i = 0; i < copy.length; i++) {
-            int temp = copy[i];
+    public static void insertionSort(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            int temp = array[i];
             int j =i-1;
-            while(j >= 0 && copy[j] > temp) {
-                copy[j + 1] = copy[j];
+            while(j >= 0 && array[j] > temp) {
+                array[j + 1] = array[j];
                 j--;
             }
-            copy[j + 1] = temp;
+            array[j + 1] = temp;
         }
-
-        return copy;
     }
 
     public static void quickSort(int[] array, int low, int high) {
