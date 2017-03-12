@@ -74,7 +74,7 @@ public class Main {
                         case "cs":
                             createSchedule();
                             break;
-                        case "cе":
+                        case "ct":
                             createTask();
                             break;
                         case "oc":
@@ -284,7 +284,7 @@ public class Main {
             println("cc -- createCompany");
             println("cw -- createWorker");
             println("cs -- createSchedule");
-            println("ce -- createTask");
+            println("ct -- createTask");
             println("oc -- outputCompany");
             println("os -- outputSchedules");
             println("ot -- outputTasks");
